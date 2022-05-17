@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  height: 40px;
+}
+
+header img {
+  width: 150px;
+  grid-column: 2/7;
+  align-self: center;
+}
+
+#Cuenta {
+  grid-column: 9/11;
+  text-decoration: none;
+  color: rgb(116, 116, 116);
+  text-align: center;
+  width: 120px;
+  height: 15px;
+  align-self: center;
+  justify-self: end;
+  margin-right: 20px;
+}
+#Home {
+  grid-column: 11/13;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  padding-top: 12px;
+  align-self: center;
+  border-radius: 10px;
+  background-color: rgb(60, 60, 60);
+  margin-right: 10px;
+}
+
+#Cuenta:hover {
+  color: blue;
+}
+#Home:hover {
+  background-color: blue;
+  color: white;
+  transition-duration: 300ms;
+}
+
+@media (max-width: 600px) {
+  header {
+    grid-template-rows: repeat(2, 40px);
+  }
+
+  #Cuenta {
+    grid-column: 10/12;
+    margin-right: 0;
+    padding: 10px;
+  }
+  #Home {
+    grid-column: 2/12;
+    grid-row: 2/3;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
