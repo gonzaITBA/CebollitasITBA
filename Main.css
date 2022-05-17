@@ -1,0 +1,132 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------------------Slicer----------------------------- */
+
+.slider {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 200%;
+
+  animation: cambio 10s infinite alternate;
+  animation-timing-function: ease-in;
+}
+
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+
+.slider img {
+  height: 400px;
+  width: 100%;
+}
+
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  45% {
+    margin-left: 0;
+  }
+
+  50% {
+    margin-left: -100%;
+  }
+  100% {
+    margin-left: -100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider {
+    margin-top: 55px;
+  }
+}
+
+/* --------------------------menu --------------------------------- */
+
+.menu {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(1, 100px);
+  align-items: center;
+  text-align: center;
+}
+
+#tarjeta {
+  grid-column: 2/3;
+}
+
+#prestamos {
+  grid-column: 3/4;
+}
+#inversiones {
+  grid-column: 4/5;
+}
+
+.menu a {
+  text-decoration: none;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgb(60, 60, 60);
+  color: white;
+  border-radius: 3px;
+}
+
+.menu span {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.menu a:hover {
+  color: white;
+  background-color: rgb(57, 166, 255);
+  transition-duration: 200ms;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.121);
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    grid-template-columns: 5px repeat(3, 1fr) 5px;
+    grid-template-rows: repeat(2, 100px);
+  }
+
+  #tarjeta {
+    grid-column: 2/3;
+    align-self: end;
+  }
+
+  #prestamos {
+    grid-column: 3/4;
+    align-self: end;
+  }
+  #inversiones {
+    grid-column: 4/5;
+    align-self: end;
+  }
+  #seguros {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: start;
+  }
+  #ayuda {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    align-self: start;
+  }
+  #promos {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    align-self: start;
+  }
+}
